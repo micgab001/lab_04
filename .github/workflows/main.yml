@@ -34,5 +34,4 @@ jobs:
         flake8 --exit-zero
     - name: Test with unittest
       run: |
-        cd request_handler
         python -m unittest discover -p '*.py'

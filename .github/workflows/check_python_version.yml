@@ -7,10 +7,13 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    
+    strategy:
+      matrix:
+        python-version: ["3.11"]
 
     steps:
-    - uses: actions/checkout@v4
     - name: Check python version
       run: |
         python --version
